@@ -12,11 +12,16 @@ fn getio() -> PathBuf {
 }
 
 fn main() {
-    let mut pathinput = PathBuf::new();
 
-    println!("Give Me an input Directory");
+    println!("Give Me an input Directory:");
     let mut pathinput = getio();
     println!("Input Directory {}", pathinput.display());
+
+    println!("Give Me an output Directory:");
+    let mut pathoutput = getio();
+    println!("Output Directory {}", pathoutput.display());
+
+    fs::copy(pathinput, pathoutput);
 
 
     //let paths = fs::read_dir("./").unwrap();
