@@ -20,6 +20,8 @@ fn main() {
     let path_output = getio();
     println!("Output Directory {}", path_output.display());
 
+    fs::copy(path_input, path_output);
+
 
     //let paths = fs::read_dir(path_input).unwrap();
 //
