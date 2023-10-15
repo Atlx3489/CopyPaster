@@ -1,5 +1,4 @@
 use std::fs;
-use std::fs::read_to_string;
 use std::io;
 use std::path::{Path, PathBuf};
 
@@ -14,19 +13,17 @@ fn getio() -> PathBuf {
 fn main() {
 
     println!("Give Me an input Directory:");
-    let mut pathinput = getio();
-    println!("Input Directory {}", pathinput.display());
+    let path_input = getio();
+    println!("Input Directory {}", path_input.display());
 
     println!("Give Me an output Directory:");
-    let mut pathoutput = getio();
-    println!("Output Directory {}", pathoutput.display());
-
-    fs::copy(pathinput, pathoutput);
+    let path_output = getio();
+    println!("Output Directory {}", path_output.display());
 
 
-    //let paths = fs::read_dir("./").unwrap();
-    //
-    //for path in paths{
-    //    println!("Name: {}", path.unwrap().path().display())
+    //let paths = fs::read_dir(path_input).unwrap();
+//
+   // for path in paths{
+   //     println!("Name: {}", path.unwrap().path().display())
     //}
 }
